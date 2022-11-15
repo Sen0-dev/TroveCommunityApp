@@ -2,7 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-//import 'package:google_fonts/google_fonts.dart';
+import 'package:intl/intl.dart';
+
 
 class SignupInterface extends StatefulWidget {
   
@@ -69,11 +70,11 @@ class _SignupInterfaceState extends State<SignupInterface> {
                   lastDate: DateTime(2100)
                 );
 
-                /*if (pickeddate != null) {
+                if (pickeddate != null) {
                   setState(() {
-                    datee.text = DateFormat.yyyyMMdd().format(pickeddate);
+                    datee.text = DateFormat("yyyy-MM-dd").format(pickeddate);
                   });
-                }*/
+                }
               },
             ),
           )
