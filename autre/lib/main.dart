@@ -1,11 +1,16 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'login_interface.dart';
-import 'signup_interface.dart';
+import 'package:flutter/services.dart';
+import 'loginPage/loginInterfaceFile.dart';
+import 'loginPage/signupInterfaceFile.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations(
+    [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
+  
   runApp(TestApp());
 }
 
@@ -17,34 +22,59 @@ class TestApp extends StatefulWidget {
 
 class _TestAppState extends State<TestApp> {
   
-  Widget displayInterface = LoginInterface();
+  @override
+  Widget build(BuildContext context) {
 
-  void toogleInterface1() {
+
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Home()
+    );
+  }
+}
+
+
+
+class Home extends StatefulWidget {
+
+  _HomeState createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+
+Widget displayInterface = LoginInterface();
+  
+  bool bool_interface = false;
+
+  void loginInterface() {
     setState(() {
-    displayInterface = LoginInterface(); 
+    displayInterface = LoginInterface();
+    bool_interface = false; 
     });
 
   }
-  void toogleInterface2() {
+  void signupInterface() {
     setState(() {
     displayInterface = SignupInterface();      
+    bool_interface = true; 
     });
+
   }
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      
-      home: Scaffold(
+
+    return Scaffold(
       backgroundColor: Color.fromARGB(255, 85, 150, 248), // 255, 85, 150, 248 test: 255, 83, 152, 255
       body: Center(
           child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-          
+            Text("Width:" + MediaQuery.of(context).size.width .toString()),
+            Text("Height:" + MediaQuery.of(context).size.height.toString()),
+            
             Column(children: [
-
+              
               // Trove
               Text("Trove", textAlign: TextAlign.start,style: GoogleFonts.pressStart2p(
                 textStyle: TextStyle(
@@ -72,9 +102,16 @@ class _TestAppState extends State<TestApp> {
               padding: EdgeInsets.only(bottom: 25),
               margin: EdgeInsets.all(28),
               decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: Color.fromARGB(57, 4, 2, 2), 
+                    blurRadius: 25.0, 
+                    offset: Offset(0, 0)
+                  )
+                ],
                 color: Color.fromARGB(255, 253, 222, 24),
                 borderRadius: BorderRadius.circular(12),
-                ),
+              ),
               child: Form(child:
               Column(children: <Widget>[
 
@@ -85,15 +122,15 @@ class _TestAppState extends State<TestApp> {
                   // Login Button
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    primary: Color.fromARGB(255, 226, 201, 12),
+                    primary: (bool_interface == false) ? Color.fromARGB(255, 226, 201, 12) : Color.fromARGB(255, 253, 222, 24) ,//Color.fromARGB(255, 226, 201, 12),
                     elevation: 0,
                     fixedSize: Size(110, 50),
                   ),
-                  onPressed: toogleInterface1,
+                  onPressed: loginInterface,
                   child: Text("Login", style: GoogleFonts.orbitron(
                   textStyle: TextStyle(
                     fontWeight: FontWeight.bold,
-                    color: Color.fromARGB(255, 177, 159, 41), 
+                    color:  Color.fromARGB(255, 177, 159, 41),
                     fontSize:25,
                   )
                   ))
@@ -102,11 +139,11 @@ class _TestAppState extends State<TestApp> {
                 // Sign up button
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    primary: Color.fromARGB(255, 253, 222, 24),
+                    primary: (bool_interface == true) ? Color.fromARGB(255, 226, 201, 12) : Color.fromARGB(255, 253, 222, 24),
                     elevation: 0,
                     fixedSize: Size(130, 50),
                   ),
-                  onPressed: toogleInterface2,
+                  onPressed: signupInterface,
                   child: Text("Signup", style: GoogleFonts.orbitron(
                   textStyle: TextStyle(
                     fontWeight: FontWeight.bold,
@@ -118,21 +155,18 @@ class _TestAppState extends State<TestApp> {
 
                 ],),
 
-                SizedBox(height: 40,),
+                const SizedBox(height: 40,),
 
                 // Login/Signup Interface
-                displayInterface
-                
-                // interface
 
+                displayInterface      
+                // interface
 
               ],)
               )
             ), 
           ],
-        )
-            
-      )
+        )          
       )
     );
   }
