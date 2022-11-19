@@ -101,7 +101,7 @@ Widget displayInterface = LoginInterface();
           ])),
 
           // Space between title Container and Input Container
-           SizedBox(height: 60,),
+           SizedBox(height: 50,),
           
            // Login Container 
            Container(

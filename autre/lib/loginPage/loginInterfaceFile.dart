@@ -27,12 +27,15 @@ class _LoginInterfaceState extends State<LoginInterface> {
         decoration: InputDecoration(
           contentPadding: EdgeInsets.only(top: 10),
           prefixIcon: Icon(Icons.mail, color: Colors.black,),
+          focusedBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: Colors.black, width: 2)),
           enabledBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: Colors.black, width: 2)
+            borderSide: BorderSide(color: Colors.black, width: 2),
           ),
           fillColor: Colors.white,
           filled: true,
-          labelText: 'E-mail'
+          labelText: 'E-mail',
+          floatingLabelStyle: TextStyle(color: Colors.black),
         ),
         keyboardType: TextInputType.emailAddress,
       ),
@@ -45,12 +48,15 @@ class _LoginInterfaceState extends State<LoginInterface> {
         decoration: InputDecoration(
           contentPadding: EdgeInsets.only(top: 10, ),
           prefixIcon: Icon(Icons.lock, color: Colors.black,),
+          focusedBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: Colors.black, width: 2)),
           enabledBorder: OutlineInputBorder(
             borderSide: BorderSide(color: Colors.black, width: 2)
           ),
           fillColor: Color.fromARGB(255, 255, 255, 255),
           filled: true,
-          labelText: 'Password'
+          labelText: 'Password',
+          floatingLabelStyle: TextStyle(color: Colors.black),
         ),
         keyboardType: TextInputType.visiblePassword,
       ),
