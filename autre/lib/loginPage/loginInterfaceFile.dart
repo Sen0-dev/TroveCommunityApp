@@ -10,7 +10,6 @@ class LoginInterface extends StatefulWidget {
 
 class _LoginInterfaceState extends State<LoginInterface> {
 
-
   var is_check = false;
 
   @override
@@ -82,7 +81,7 @@ class _LoginInterfaceState extends State<LoginInterface> {
         ))
       ]),
 
-      SizedBox(height: 15),
+      SizedBox(height: 20),
 
       // Confirm
       ElevatedButton(

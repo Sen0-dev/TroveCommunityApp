@@ -119,7 +119,7 @@ class _SignupInterfaceState extends State<SignupInterface> {
       ),
 
 
-      SizedBox(height: 30),
+      SizedBox(height: 35),
 
       // LETS GOOO!!
       ElevatedButton(

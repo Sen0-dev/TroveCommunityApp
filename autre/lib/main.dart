@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, prefer_interpolation_to_compose_strings
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -7,6 +7,7 @@ import 'loginPage/loginInterfaceFile.dart';
 import 'loginPage/signupInterfaceFile.dart';
 
 void main() {
+  // set orientation device
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations(
     [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
@@ -19,7 +20,7 @@ class TestApp extends StatefulWidget {
   _TestAppState createState() => _TestAppState();
 }
 
-
+// MAIN
 class _TestAppState extends State<TestApp> {
   
   @override
@@ -34,7 +35,7 @@ class _TestAppState extends State<TestApp> {
 }
 
 
-
+// HOME Class
 class Home extends StatefulWidget {
 
   _HomeState createState() => _HomeState();
@@ -70,35 +71,41 @@ Widget displayInterface = LoginInterface();
           child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("Width:" + MediaQuery.of(context).size.width .toString()),
-            Text("Height:" + MediaQuery.of(context).size.height.toString()),
+            //Text("Width:" + MediaQuery.of(context).size.width .toString()),
+            //Text("Height:" + MediaQuery.of(context).size.height.toString()),
             
-            Column(children: [
+            Container(
+              //decoration: BoxDecoration(color: Colors.pink),
+              child: Column(              
+              children: [
               
-              // Trove
+              // Trove              
               Text("Trove", textAlign: TextAlign.start,style: GoogleFonts.pressStart2p(
                 textStyle: TextStyle(
                   color:Color.fromARGB(255, 253, 222, 24), 
-                  fontSize:64, 
+                  fontSize:60, 
                   shadows: [Shadow(offset: Offset(1,5))]))),
-
+              
               // Comunnity Container
-              Container(margin: EdgeInsets.only(left: 55) ,child:
+              Container(
+                margin: EdgeInsets.only(left: 55) ,
+                child:
                 Text("Community", style: GoogleFonts.orbitron(
                   textStyle: TextStyle(
-                    // fontWeight: FontWeight.bold,
+                    //fontWeight: FontWeight.bold,
                     color: Color.fromARGB(255, 255, 0, 0), 
                     fontSize:44,
                   ),
                 )),
               )
-            ]),
+          ])),
 
           // Space between title Container and Input Container
-           SizedBox(height: 70,),
-
+           SizedBox(height: 60,),
+          
            // Login Container 
            Container(
+            width: 500,
               padding: EdgeInsets.only(bottom: 25),
               margin: EdgeInsets.all(28),
               decoration: BoxDecoration(
