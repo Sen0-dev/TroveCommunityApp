@@ -66,7 +66,10 @@ class _LoginInterfaceState extends State<LoginInterface> {
       SizedBox(height: 20),
 
       // Stay connected
-      Row(children: [
+      Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+        Row(children: [
         Checkbox(
           value: is_check,
           checkColor: Colors.yellow,
@@ -74,7 +77,7 @@ class _LoginInterfaceState extends State<LoginInterface> {
           side: BorderSide(color: Color.fromARGB(255, 177, 159, 41), width: 2),
           onChanged: (bool? value1){
             setState(() {
-              print(value1);
+              //print(value1);
               is_check = value1!;
             });
         }),
@@ -86,7 +89,26 @@ class _LoginInterfaceState extends State<LoginInterface> {
             fontWeight: FontWeight.bold,
             color: Color.fromARGB(255, 177, 159, 41), 
           )
-        ))
+        )),
+        ]),
+
+        MouseRegion(
+          onEnter: (_) {
+          },
+          onExit: (_) {
+
+          }, 
+          child:
+            Text("Forgot password ?", style: GoogleFonts.basic(
+              textStyle: TextStyle(
+                decoration: TextDecoration.underline,
+                decorationColor: Colors.black,
+                fontSize: 14,
+                fontWeight: FontWeight.bold,
+                color: Color.fromARGB(255, 177, 159, 41), 
+              )
+            ))
+        )
       ]),
 
       SizedBox(height: 30),
