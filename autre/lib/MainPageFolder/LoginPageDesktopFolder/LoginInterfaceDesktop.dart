@@ -10,7 +10,6 @@ class LoginInterface extends StatefulWidget {
 
 
 
-
 class _LoginInterfaceState extends State<LoginInterface> {
 
   var is_check = false;
@@ -64,7 +63,7 @@ class _LoginInterfaceState extends State<LoginInterface> {
         keyboardType: TextInputType.visiblePassword,
       ),
 
-      SizedBox(height: 5),
+      SizedBox(height: 20),
 
       // Stay connected
       Row(children: [
@@ -90,7 +89,7 @@ class _LoginInterfaceState extends State<LoginInterface> {
         ))
       ]),
 
-      SizedBox(height: 20),
+      SizedBox(height: 30),
 
       // Confirm
       ElevatedButton(
@@ -100,7 +99,7 @@ class _LoginInterfaceState extends State<LoginInterface> {
           width: 1.5,
           style: BorderStyle.solid
           ),
-        primary: Color.fromARGB(255, 253, 222, 24), 
+        backgroundColor: Color.fromARGB(255, 253, 222, 24), 
         elevation: 0,
         fixedSize: Size(120, 50),
       ),

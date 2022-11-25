@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'LoginInterfaceDesktop.dart';
-import '../loginPageMobileFolder/SignupInterfaceMobile.dart';
+import 'SignupInterfaceDesktop.dart';
 
 
 class MainPageDesktop extends StatefulWidget {
@@ -47,7 +47,7 @@ Widget displayInterface = LoginInterface();
   }
   void signupInterface() {
     setState(() {
-    displayInterface = SignupInterfaceMobile();      
+    displayInterface = SignupInterface();      
     bool_interface = true; 
     });
 
@@ -68,10 +68,9 @@ Widget displayInterface = LoginInterface();
             //Text("Width:" + MediaQuery.of(context).size.width .toString()),
             //Text("Height:" + MediaQuery.of(context).size.height.toString()),
             
-              
             Container(  
-            //decoration: 
-            //BoxDecoration(color: Colors.blueAccent),
+          //decoration: 
+          //BoxDecoration(color: Colors.pink),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -80,7 +79,7 @@ Widget displayInterface = LoginInterface();
                 Text("Trove", textAlign: TextAlign.start,style: GoogleFonts.pressStart2p(
                   textStyle: TextStyle(
                     color:Color.fromARGB(255, 253, 222, 24), 
-                    fontSize:70, 
+                    fontSize: 77, 
                     shadows: [Shadow(offset: Offset(1,5))]))),
                 
                 // Comunnity Container
@@ -94,88 +93,87 @@ Widget displayInterface = LoginInterface();
                       fontSize:54,
                     ),
                   )),
-                )
-                  
+                )                
             ]
           )
-          ),
-            
-          // Space between title Container and Input Container
+        ),
           
-           // Login Container
-           Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-           Container(
-            width: 500,
-              padding: EdgeInsets.only(bottom: 25),
-              margin: EdgeInsets.all(28),
-              decoration: BoxDecoration(
-                boxShadow: [
-                  BoxShadow(
-                    color: Color.fromARGB(57, 4, 2, 2), 
-                    blurRadius: 25.0, 
-                    offset: Offset(0, 0)
-                  )
-                ],
-                color: Color.fromARGB(255, 253, 222, 24),
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: Form(child:
-              Column(children: <Widget>[
-
-                // Row Login/Sign up Button
-                Row(children: [
-                  
-                  
-                  // Login Button
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    primary: (bool_interface == false) ? Color.fromARGB(255, 226, 201, 12) : Color.fromARGB(255, 253, 222, 24) ,//Color.fromARGB(255, 226, 201, 12),
-                    elevation: 0,
-                    fixedSize: Size(110, 50),
-                  ),
-                  onPressed: loginInterface,
-                  child: Text("Login", style: GoogleFonts.orbitron(
-                  textStyle: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color:  Color.fromARGB(255, 177, 159, 41),
-                    fontSize:25,
-                  )
-                  ))
-                ),
-
-                // Sign up button
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    primary: (bool_interface == true) ? Color.fromARGB(255, 226, 201, 12) : Color.fromARGB(255, 253, 222, 24),
-                    elevation: 0,
-                    fixedSize: Size(130, 50),
-                  ),
-                  onPressed: signupInterface,
-                  child: Text("Signup", style: GoogleFonts.orbitron(
-                  textStyle: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Color.fromARGB(255, 177, 159, 41), 
-                    fontSize:25,
-                  )
-                  ))
+        // Space between title Container and Input Container
+            
+          // Login Container
+          Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+        Center(child: 
+          Container(
+          height: 390,
+          width: 500,
+            padding: EdgeInsets.only(bottom: 25),
+            margin: EdgeInsets.all(28),
+            decoration: BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                  color: Color.fromARGB(57, 4, 2, 2), 
+                  blurRadius: 25.0, 
+                  offset: Offset(0, 0)
                 )
+              ],
+              color: Color.fromARGB(255, 253, 222, 24),
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: Form(child:
+            Column(children: <Widget>[
 
-                ],),
+              // Row Login/Sign up Button
+              Row(children: [        
+                
+                // Login Button
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: (bool_interface == false) ? Color.fromARGB(255, 226, 201, 12) : Color.fromARGB(255, 253, 222, 24) ,//Color.fromARGB(255, 226, 201, 12),
+                  elevation: 0,
+                  fixedSize: Size(110, 50),
+                ),
+                onPressed: loginInterface,
+                child: Text("Login", style: GoogleFonts.orbitron(
+                textStyle: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color:  Color.fromARGB(255, 177, 159, 41),
+                  fontSize:25,
+                )
+                ))
+              ),
 
-                const SizedBox(height: 40,),
-
-                // Login/Signup Interface
-
-                displayInterface      
-                // interface
-
-              ],)
+              // Sign up button
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: (bool_interface == true) ? Color.fromARGB(255, 226, 201, 12) : Color.fromARGB(255, 253, 222, 24),
+                  elevation: 0,
+                  fixedSize: Size(130, 50),
+                ),
+                onPressed: signupInterface,
+                child: Text("Signup", style: GoogleFonts.orbitron(
+                textStyle: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(255, 177, 159, 41), 
+                  fontSize:25,
+                )
+                ))
               )
-            ), 
-          ],
-        )          
+              ],),
+
+              const SizedBox(height: 40,),
+
+              // Login/Signup Interface
+
+              displayInterface      
+              // interface
+
+            ],)
+            )
+          ), 
+        )],
+        )         
       ]),)
     );
   }

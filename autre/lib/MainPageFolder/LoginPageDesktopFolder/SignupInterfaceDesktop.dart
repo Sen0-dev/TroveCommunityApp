@@ -5,14 +5,13 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 
 
-class SignupInterfaceMobile extends StatefulWidget {
+class SignupInterface extends StatefulWidget {
   
   _SignupInterfaceState createState() => _SignupInterfaceState();
 }
 
 
-
-class _SignupInterfaceState extends State<SignupInterfaceMobile> {
+class _SignupInterfaceState extends State<SignupInterface> {
 
   TextEditingController datee = TextEditingController();
   // ignore: avoid_init_to_null
@@ -143,12 +142,12 @@ class _SignupInterfaceState extends State<SignupInterfaceMobile> {
           width: 1.5,
           style: BorderStyle.solid
           ),
-        primary: Color.fromARGB(255, 253, 222, 24), 
+        backgroundColor: Color.fromARGB(255, 253, 222, 24), 
         elevation: 0,
         fixedSize: Size(175, 50), //120, 50
       ),
       onPressed: activate,
-      child: Text("LETS GOOO!!", style: GoogleFonts.orbitron(
+      child: Text("LETS GOOO !!", style: GoogleFonts.orbitron(
       textStyle: TextStyle(
         fontWeight: FontWeight.bold,
         color: Colors.black, 
