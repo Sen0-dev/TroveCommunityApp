@@ -3,15 +3,15 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class LoginInterface extends StatefulWidget {
+class SigninMobile extends StatefulWidget {
   
-  _LoginInterfaceState createState() => _LoginInterfaceState();
+  _SigninMobileState createState() => _SigninMobileState();
 }
 
 
 
 
-class _LoginInterfaceState extends State<LoginInterface> {
+class _SigninMobileState extends State<SigninMobile> {
 
   var is_check = false;
 
@@ -75,7 +75,7 @@ class _LoginInterfaceState extends State<LoginInterface> {
           side: BorderSide(color: Color.fromARGB(255, 177, 159, 41), width: 2),
           onChanged: (bool? value1){
             setState(() {
-              print(value1);
+              //print(value1);
               is_check = value1!;
             });
         }),

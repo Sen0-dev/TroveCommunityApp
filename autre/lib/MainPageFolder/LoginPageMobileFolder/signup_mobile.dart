@@ -5,14 +5,14 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 
 
-class SignupInterfaceMobile extends StatefulWidget {
+class SignupMobile extends StatefulWidget {
   
   _SignupInterfaceState createState() => _SignupInterfaceState();
 }
 
 
 
-class _SignupInterfaceState extends State<SignupInterfaceMobile> {
+class _SignupInterfaceState extends State<SignupMobile> {
 
   TextEditingController datee = TextEditingController();
   // ignore: avoid_init_to_null

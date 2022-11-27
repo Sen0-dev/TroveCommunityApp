@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'LoginInterfaceDesktop.dart';
-import 'SignupInterfaceDesktop.dart';
+import 'signin_desktop.dart';
+import 'signup_desktop.dart';
 
 
 class MainPageDesktop extends StatefulWidget {
@@ -34,21 +34,21 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
 
-Widget displayInterface = LoginInterface();
+Widget displayInterface = SigninDesktop();
   
-  bool bool_interface = false;
+  bool boolInterface = false;
 
   void loginInterface() {
     setState(() {
-    displayInterface = LoginInterface();
-    bool_interface = false; 
+    displayInterface = SigninDesktop();
+    boolInterface = false; 
     });
 
   }
   void signupInterface() {
     setState(() {
-    displayInterface = SignupInterface();      
-    bool_interface = true; 
+    displayInterface = SignupDesktop();      
+    boolInterface = true; 
     });
 
   }
@@ -130,7 +130,7 @@ Widget displayInterface = LoginInterface();
                 // Login Button
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: (bool_interface == false) ? Color.fromARGB(255, 226, 201, 12) : Color.fromARGB(255, 253, 222, 24) ,//Color.fromARGB(255, 226, 201, 12),
+                  backgroundColor: (boolInterface == false) ? Color.fromARGB(255, 226, 201, 12) : Color.fromARGB(255, 253, 222, 24) ,//Color.fromARGB(255, 226, 201, 12),
                   elevation: 0,
                   fixedSize: Size(110, 50),
                 ),
@@ -147,7 +147,7 @@ Widget displayInterface = LoginInterface();
               // Sign up button
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: (bool_interface == true) ? Color.fromARGB(255, 226, 201, 12) : Color.fromARGB(255, 253, 222, 24),
+                  backgroundColor: (boolInterface == true) ? Color.fromARGB(255, 226, 201, 12) : Color.fromARGB(255, 253, 222, 24),
                   elevation: 0,
                   fixedSize: Size(130, 50),
                 ),

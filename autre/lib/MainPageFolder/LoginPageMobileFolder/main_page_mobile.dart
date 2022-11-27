@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'SignupInterfaceMobile.dart';
-import 'LoginInterfaceMobile.dart';
+import 'signup_mobile.dart';
+import 'signin_mobile.dart';
 
 
 class MainPageMobile extends StatefulWidget {
@@ -34,21 +34,21 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
 
-Widget displayInterface = LoginInterface();
+Widget displayInterface = SigninMobile();
   
-  bool bool_interface = false;
+  bool boolInterface = false;
 
   void loginInterface() {
     setState(() {
-    displayInterface = LoginInterface();
-    bool_interface = false; 
+    displayInterface = SigninMobile();
+    boolInterface = false; 
     });
 
   }
   void signupInterface() {
     setState(() {
-    displayInterface = SignupInterfaceMobile();      
-    bool_interface = true; 
+    displayInterface = SignupMobile();      
+    boolInterface = true; 
     });
 
   }
@@ -62,10 +62,10 @@ Widget displayInterface = LoginInterface();
           child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("MOBILE"),
+           // Text("MOBILE"),
             
-            Text("Width:" + MediaQuery.of(context).size.width .toString()),
-            Text("Height:" + MediaQuery.of(context).size.height.toString()),
+            // Text("Width:" + MediaQuery.of(context).size.width .toString()),
+            // Text("Height:" + MediaQuery.of(context).size.height.toString()),
             
             Container(
               //decoration: BoxDecoration(color: Colors.pink),
@@ -122,7 +122,7 @@ Widget displayInterface = LoginInterface();
                   // Login Button
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    primary: (bool_interface == false) ? Color.fromARGB(255, 226, 201, 12) : Color.fromARGB(255, 253, 222, 24) ,//Color.fromARGB(255, 226, 201, 12),
+                    primary: (boolInterface == false) ? Color.fromARGB(255, 226, 201, 12) : Color.fromARGB(255, 253, 222, 24) ,//Color.fromARGB(255, 226, 201, 12),
                     elevation: 0,
                     fixedSize: Size(110, 50),
                   ),
@@ -139,7 +139,7 @@ Widget displayInterface = LoginInterface();
                 // Sign up button
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    primary: (bool_interface == true) ? Color.fromARGB(255, 226, 201, 12) : Color.fromARGB(255, 253, 222, 24),
+                    primary: (boolInterface == true) ? Color.fromARGB(255, 226, 201, 12) : Color.fromARGB(255, 253, 222, 24),
                     elevation: 0,
                     fixedSize: Size(130, 50),
                   ),

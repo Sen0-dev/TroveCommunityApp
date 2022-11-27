@@ -3,16 +3,16 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class LoginInterface extends StatefulWidget {
+class SigninDesktop extends StatefulWidget {
   
-  _LoginInterfaceState createState() => _LoginInterfaceState();
+  _SigninDesktopState createState() => _SigninDesktopState();
 }
 
 
 
-class _LoginInterfaceState extends State<LoginInterface> {
+class _SigninDesktopState extends State<SigninDesktop> {
 
-  var is_check = false;
+  var isCheck = false;
 
   @override
   Widget build(BuildContext context) {
@@ -71,14 +71,14 @@ class _LoginInterfaceState extends State<LoginInterface> {
         children: [
         Row(children: [
         Checkbox(
-          value: is_check,
+          value: isCheck,
           checkColor: Colors.yellow,
           activeColor: Colors.black,
           side: BorderSide(color: Color.fromARGB(255, 177, 159, 41), width: 2),
           onChanged: (bool? value1){
             setState(() {
               //print(value1);
-              is_check = value1!;
+              isCheck = value1!;
             });
         }),
         
