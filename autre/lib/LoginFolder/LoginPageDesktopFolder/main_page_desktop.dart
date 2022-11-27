@@ -88,9 +88,27 @@ Widget displayInterface = SigninDesktop();
                   child:
                   Text("Community", style: GoogleFonts.orbitron(
                     textStyle: TextStyle(
-                      //fontWeight: FontWeight.bold,
                       color: Color.fromARGB(255, 255, 0, 0), 
                       fontSize:54,
+                      letterSpacing: 1,
+                      shadows: [
+                      Shadow( // bottomLeft
+                        offset: Offset(-1.5, -1.5),
+                        color: Colors.black
+                      ),
+                      Shadow( // bottomRight
+                        offset: Offset(1.5, -1.5),
+                        color: Colors.red
+                      ),
+                      Shadow( // topRight
+                        offset: Offset(1.5, 1.5),
+                        color: Colors.black
+                      ),
+                      Shadow( // topLeft
+                        offset: Offset(-1.5, 1.5),
+                        color: Colors.black
+                      ),
+                    ]
                     ),
                   )),
                 )                

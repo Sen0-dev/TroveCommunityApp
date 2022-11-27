@@ -75,9 +75,10 @@ Widget displayInterface = SigninMobile();
               // Trove              
               Text("Trove", textAlign: TextAlign.start,style: GoogleFonts.pressStart2p(
                 textStyle: TextStyle(
+                  
                   color:Color.fromARGB(255, 253, 222, 24), 
                   fontSize:60, 
-                  shadows: [Shadow(offset: Offset(1,5))]))),
+                  shadows: [Shadow(offset: Offset(0,4))]))),
               
               // Comunnity Container
               Container(
@@ -86,8 +87,26 @@ Widget displayInterface = SigninMobile();
                 Text("Community", style: GoogleFonts.orbitron(
                   textStyle: TextStyle(
                     //fontWeight: FontWeight.bold,
-                    color: Color.fromARGB(255, 255, 0, 0), 
+                    color: Color.fromARGB(255, 234, 9, 9), // Color.fromARGB(255, 234, 9, 9)
                     fontSize:44,
+                    shadows: [
+                      Shadow( // bottomLeft
+                        offset: Offset(-1.5, -1.5),
+                        color: Colors.black
+                      ),
+                      Shadow( // bottomRight
+                        offset: Offset(1.5, -1.5),
+                        color: Colors.black
+                      ),
+                      Shadow( // topRight
+                        offset: Offset(1.5, 1.5),
+                        color: Colors.black
+                      ),
+                      Shadow( // topLeft
+                        offset: Offset(-1.5, 1.5),
+                        color: Colors.red
+                      ),
+                    ]
                   ),
                 )),
               )
