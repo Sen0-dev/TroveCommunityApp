@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, annotate_overrides, library_private_types_in_public_api, use_key_in_widget_constructors
 
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 
@@ -146,7 +147,7 @@ class _SignupDesktopState extends State<SignupDesktop> {
         elevation: 0,
         fixedSize: Size(175, 50), //120, 50
       ),
-      onPressed: activate,
+      onPressed: () => context.go("/userInterface"),
       child: Text("LETS GOOO !!", style: GoogleFonts.orbitron(
       textStyle: TextStyle(
         fontWeight: FontWeight.bold,

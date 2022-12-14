@@ -1,18 +1,19 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, non_constant_identifier_names, annotate_overrides
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class SigninDesktop extends StatefulWidget {
-  
-  _SigninDesktopState createState() => _SigninDesktopState();
+class SigninMobile extends StatefulWidget {
+
+  _SigninMobileState createState() => _SigninMobileState();
 }
 
 
 
-class _SigninDesktopState extends State<SigninDesktop> {
 
-  var isCheck = false;
+class _SigninMobileState extends State<SigninMobile> {
+
+  var is_check = false;
 
   @override
   Widget build(BuildContext context) {
@@ -63,22 +64,19 @@ class _SigninDesktopState extends State<SigninDesktop> {
         keyboardType: TextInputType.visiblePassword,
       ),
 
-      SizedBox(height: 20),
+      SizedBox(height: 5),
 
       // Stay connected
-      Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-        Row(children: [
+      Row(children: [
         Checkbox(
-          value: isCheck,
+          value: is_check,
           checkColor: Colors.yellow,
           activeColor: Colors.black,
           side: BorderSide(color: Color.fromARGB(255, 177, 159, 41), width: 2),
           onChanged: (bool? value1){
             setState(() {
               //print(value1);
-              isCheck = value1!;
+              is_check = value1!;
             });
         }),
         
@@ -89,29 +87,10 @@ class _SigninDesktopState extends State<SigninDesktop> {
             fontWeight: FontWeight.bold,
             color: Color.fromARGB(255, 177, 159, 41), 
           )
-        )),
-        ]),
-
-        MouseRegion(
-          onEnter: (_) {
-          },
-          onExit: (_) {
-
-          }, 
-          child:
-            Text("Forgot password ?", style: GoogleFonts.basic(
-              textStyle: TextStyle(
-                decoration: TextDecoration.underline,
-                decorationColor: Colors.black,
-                fontSize: 14,
-                fontWeight: FontWeight.bold,
-                color: Color.fromARGB(255, 177, 159, 41), 
-              )
-            ))
-        )
+        ))
       ]),
 
-      SizedBox(height: 30),
+      SizedBox(height: 20),
 
       // Confirm
       ElevatedButton(
@@ -121,7 +100,7 @@ class _SigninDesktopState extends State<SigninDesktop> {
           width: 1.5,
           style: BorderStyle.solid
           ),
-        backgroundColor: Color.fromARGB(255, 253, 222, 24), 
+        backgroundColor: Color.fromARGB(255, 253, 222, 24), // 255, 253, 222, 24 
         elevation: 0,
         fixedSize: Size(120, 50),
       ),

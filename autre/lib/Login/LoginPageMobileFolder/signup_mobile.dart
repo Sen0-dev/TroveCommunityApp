@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
+import 'package:go_router/go_router.dart';
+
 
 
 class SignupMobile extends StatefulWidget {
@@ -143,11 +145,11 @@ class _SignupInterfaceState extends State<SignupMobile> {
           width: 1.5,
           style: BorderStyle.solid
           ),
-        primary: Color.fromARGB(255, 253, 222, 24), 
+        backgroundColor: Color.fromARGB(255, 253, 222, 24), // 255, 253, 222, 24 
         elevation: 0,
         fixedSize: Size(175, 50), //120, 50
       ),
-      onPressed: activate,
+      onPressed: () => context.go("/userInterface"),
       child: Text("LETS GOOO!!", style: GoogleFonts.orbitron(
       textStyle: TextStyle(
         fontWeight: FontWeight.bold,
