@@ -21,7 +21,7 @@ class _UserInterfaceMobileState extends State<UserInterfaceMobile> {
         backgroundColor: Color.fromARGB(255, 85, 150, 248),
         bottomNavigationBar: CurvedNavigationBar(
           color:Color.fromARGB(255, 249, 216, 6), 
-          backgroundColor: Color.fromARGB(255, 85, 150, 248),
+          backgroundColor: Colors.transparent,
           animationDuration: Duration(milliseconds: 350),
           height: 60,
           items: [
@@ -32,7 +32,7 @@ class _UserInterfaceMobileState extends State<UserInterfaceMobile> {
           ]
         ),
         
-        body:  
+        body:
         Container(
           width: 1950,
           child: 
@@ -41,32 +41,37 @@ class _UserInterfaceMobileState extends State<UserInterfaceMobile> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           
           children: [
-            Container(
-              //decoration: BoxDecoration(border: Border.all(color: Colors.black)),
+            Container(          
+              //decoration: BoxDecoration(border: Border.all(color: Colors.yellow, width: 3)),
               height: 435,
-              width: 525,
+              //width: 210,
+              constraints: BoxConstraints(maxWidth: 610),
               child:
-                GridView.count(
-                  crossAxisCount: 2,
-                  crossAxisSpacing: 20,
-                  mainAxisSpacing: 10,
-                
-                  children: [
-                    Container(child: Text("Global Chat"),color: Color.fromARGB(197, 93, 192, 238)),
-                    Container(child: Text("Alert Dragons"),color: Colors.red),
-                    Container(child: Text("Shadow Tower"),color: Colors.purpleAccent),
-                    Container(child: Text("Pinata Party"),color: Colors.yellow,),
-                    Container(child: Text("Dongeons"),color: Colors.blueGrey),
-                    Container(child: Text("Delves"),color: Colors.orange),
-                  ],
-                )
+                SingleChildScrollView(               
+                scrollDirection: Axis.vertical,
+                child:  
+                  Wrap(
+                    spacing: 6,
+                    runSpacing: 5,
+                    direction: Axis.horizontal,
+                    children: [
+                      Container(height: 190, width: 190,child: Text("Global Chat"),color: Color.fromARGB(197, 93, 192, 238)),
+                      Container(height: 190, width: 190,child: Text("Alert Dragons"),color: Colors.red),
+                      Container(height: 190, width: 190,child: Text("Shadow Tower"),color: Colors.purpleAccent),
+                      Container(height: 190, width: 190,child: Text("Pinata Party"),color: Colors.yellow,),
+                      Container(height: 190, width: 190,child: Text("Dongeons"),color: Colors.blueGrey),
+                      Container(height: 190, width: 190,child: Text("Delves"),color: Colors.orange),
+                    ],
+                  )
+                ),
             ),
+            
 
             SizedBox(height: 5,),
 
             // Bonus Days
           Container(
-            width: 850,
+            width: 800,
             constraints: BoxConstraints(maxHeight: 150),
             decoration:
             BoxDecoration(
