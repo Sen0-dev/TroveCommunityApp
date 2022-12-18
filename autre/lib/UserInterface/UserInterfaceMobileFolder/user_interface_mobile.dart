@@ -22,6 +22,7 @@ class _UserInterfaceMobileState extends State<UserInterfaceMobile> {
       home: Scaffold(
         backgroundColor: Color.fromARGB(255, 85, 150, 248),
         bottomNavigationBar: CurvedNavigationBar(
+          index: 1,
           color:Color.fromARGB(255, 249, 216, 6), 
           backgroundColor: Colors.transparent,
           animationDuration: Duration(milliseconds: 350),
@@ -30,23 +31,27 @@ class _UserInterfaceMobileState extends State<UserInterfaceMobile> {
             Icon(Icons.message_outlined, size: 30),
             Icon(Icons.square_outlined, size: 30),
             Icon(Icons.person_outline, size: 30),
-            Icon(Icons.settings_outlined, size: 30),
+            Icon(Icons.live_tv_outlined, size: 30),
           ]
         ),
-        /*appBar: AppBar(
-          elevation: 0,
+        appBar: AppBar(
+          toolbarHeight: 50,
+          elevation: 1,
           backgroundColor:Color.fromARGB(255, 249, 216, 6),
           title: 
           Row(children: [
-            Icon(Icons.circle, color: Colors.green,),
-            Text("Online", style: GoogleFonts.basic(textStyle: TextStyle(color: Colors.black)),),
+            Icon(Icons.circle, color: Colors.green, size: 19,),
+            Text("Online: 125", style: GoogleFonts.basic(textStyle: TextStyle(color: Colors.black, fontSize: 17)),),
 
-            SizedBox(width: 5,),
+            SizedBox(width: 20,),
 
-            Icon(Icons.circle, color: Colors.grey,),
-            Text("Members", style: GoogleFonts.basic(textStyle: TextStyle(color: Colors.black)),),
+            Icon(Icons.circle, color: Colors.grey, size: 19,),
+            Text("Members: 1089", style: GoogleFonts.basic(textStyle: TextStyle(color: Colors.black, fontSize: 17)),),
+            Expanded(child:
+            Row(mainAxisAlignment: MainAxisAlignment.end, children: [Icon(Icons.settings_outlined, color: Colors.black, size: 25,),],)
+            )
           ]),
-        ),*/
+        ),
         
         body:
         Container(
@@ -122,7 +127,7 @@ class _UserInterfaceMobileState extends State<UserInterfaceMobile> {
                 ),
               )           
           ),
-                SizedBox(),
+                SizedBox(height: 1,),
           ],
         ),),
       ),
