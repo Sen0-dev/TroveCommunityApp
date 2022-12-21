@@ -120,21 +120,22 @@ class _MainPageMobileState extends State<MainPageMobile> {
               ),
               child: Form(child:
               Column(children: <Widget>[
-
+                
                 // Row Login/Sign up Button
-                Row(children: [
-                  
-                  
+                Row(children: [            
+                
                   // Login Button
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     backgroundColor: (boolInterface == false) ? Color.fromARGB(255, 226, 201, 12) : Color.fromARGB(255, 249, 216, 6) ,//Color.fromARGB(255, 226, 201, 12),
                     elevation: 0,
-                    fixedSize: Size(110, 50),
+                
+                    fixedSize: Size(120, 50),
                   ),
                   onPressed: loginInterface,
                   child: Text("Login", style: GoogleFonts.orbitron(
                   textStyle: TextStyle(
+                    
                     fontWeight: FontWeight.bold,
                     color:  Color.fromARGB(255, 177, 159, 41),
                     fontSize:25,
@@ -147,14 +148,15 @@ class _MainPageMobileState extends State<MainPageMobile> {
                   style: ElevatedButton.styleFrom(
                     backgroundColor: (boolInterface == true) ? Color.fromARGB(255, 226, 201, 12) : Color.fromARGB(255, 249, 216, 6),
                     elevation: 0,
-                    fixedSize: Size(130, 50),
+                    fixedSize: Size(140, 50),
+                    
                   ),
                   onPressed: signupInterface,
                   child: Text("Signup", style: GoogleFonts.orbitron(
                   textStyle: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Color.fromARGB(255, 177, 159, 41), 
-                    fontSize:25,
+                    fontSize: 25,
                   )
                   ))
                 )
