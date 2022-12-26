@@ -20,7 +20,7 @@ class _UserInterfaceMobileState extends State<UserInterfaceMobile> {
     Icon(Icons.person_outline, size: 30),
     Icon(Icons.live_tv_outlined, size: 30),
   ];
-  int indexBar = 0;
+  int indexBar = 1;
 
   @override
   Widget build(BuildContext context) {  
@@ -51,13 +51,15 @@ class _UserInterfaceMobileState extends State<UserInterfaceMobile> {
           backgroundColor:Color.fromARGB(255, 249, 216, 6),
           title: 
           Row(children: [
-            Icon(Icons.circle, color: Colors.green, size: 19,),
-            Text("Online: 125", style: GoogleFonts.basic(textStyle: TextStyle(color: Colors.black, fontSize: 17)),),
+           
+            Icon(Icons.circle, color: Colors.grey, size: 17,),
+            Text("Members: 1089", style: GoogleFonts.basic(textStyle: TextStyle(color: Colors.black, fontSize: 15)),),
 
             SizedBox(width: 20,),
-
-            Icon(Icons.circle, color: Colors.grey, size: 19,),
-            Text("Members: 1089", style: GoogleFonts.basic(textStyle: TextStyle(color: Colors.black, fontSize: 17)),),
+            
+            Icon(Icons.circle, color: Colors.green, size: 17,),
+            Text("Online: 125", style: GoogleFonts.basic(textStyle: TextStyle(color: Colors.black, fontSize: 15)),),
+            
             Expanded(child:
             Row(mainAxisAlignment: MainAxisAlignment.end, children: [Icon(Icons.settings_outlined, color: Colors.black, size: 25,),],)
             )
