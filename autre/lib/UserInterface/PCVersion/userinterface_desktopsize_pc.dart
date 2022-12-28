@@ -30,8 +30,8 @@ class _UserInterfacePCState extends State<UserInterfacePC> {
           title: 
           Row(children: [
 
-            Text("Width:" + MediaQuery.of(context).size.width .toString()),
-            Text("Height:" + MediaQuery.of(context).size.height.toString()),
+            // Text("Width:" + MediaQuery.of(context).size.width .toString()),
+            // Text("Height:" + MediaQuery.of(context).size.height.toString()),
            
             Icon(Icons.circle, color: Colors.grey, size: 17,),
             Text("Members: 1089", style: GoogleFonts.basic(textStyle: TextStyle(color: Colors.black, fontSize: 15)),),
@@ -49,10 +49,10 @@ class _UserInterfacePCState extends State<UserInterfacePC> {
         body:
 
         Row(children: [
+       
         Column(children: [
           Expanded(child: Container(
-            width: 250,
-            // height: 400,
+            width: 200,     
             decoration: BoxDecoration(
               image: DecorationImage(image: AssetImage('assets/images/fanArts/boneQueen.jpg'),
               fit: BoxFit.cover
@@ -60,26 +60,24 @@ class _UserInterfacePCState extends State<UserInterfacePC> {
             ),
           ),),
           Expanded(child: Container(
-            width: 250,
-            // height: 400,
+            width: 200,
             decoration: BoxDecoration(
               image: DecorationImage(image: AssetImage('assets/images/fanArts/chocolateDragon.jpg'),
               fit: BoxFit.cover
               )
             ),
           )),
-        ],), 
+        ],),
 
         Flexible(child: 
         TroveNetwork(),
         ),
-
+                
         Column(children: [
           Expanded(child: Container(
-            width: 250,
-            // height: 400,
+            width: 200,
             decoration: BoxDecoration(
-              image: DecorationImage(image: AssetImage('assets/images/fanArts/SirupParadise.jpg'),
+              image: DecorationImage(image: AssetImage('assets/images/fanArts/AllDragons.jpg'),
               fit: BoxFit.cover
               )
             ),

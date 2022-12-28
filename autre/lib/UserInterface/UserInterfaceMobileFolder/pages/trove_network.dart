@@ -16,7 +16,7 @@ class _TroveNetworkState extends State<TroveNetwork> {
 
     return Container(
           width: 1900,
-          //decoration: BoxDecoration(border: Border.all(color: Colors.black)),
+          decoration: BoxDecoration(border: Border.symmetric(vertical: BorderSide(color: Colors.black), horizontal: BorderSide.none), ),
           child: 
         Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -24,7 +24,7 @@ class _TroveNetworkState extends State<TroveNetwork> {
           
           children: [
             Container(          
-              //decoration: BoxDecoration(border: Border.all(color: Colors.yellow, width: 1)),
+              //decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 1), color: Color.fromARGB(241, 46, 46, 46)),
               height: 440,
               constraints: BoxConstraints(maxWidth: 780, minWidth: 180),
               child:
@@ -53,7 +53,7 @@ class _TroveNetworkState extends State<TroveNetwork> {
 
             // Bonus Days
           Container(
-            width: 800,
+            width: 780,
             constraints: BoxConstraints(maxHeight: 150),
             decoration:
             BoxDecoration(
