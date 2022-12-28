@@ -4,14 +4,15 @@ import 'router.dart';
 import 'package:go_router/go_router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
+import 'dart:io' show Platform;
 
 
 void main() {
   // set orientation device
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations(
-    [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
+    [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]
+  );
   
   runApp(TestApp());
 }
@@ -31,7 +32,7 @@ class _TestAppState extends State<TestApp> {
 
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-     routerConfig: router,
-     );
+      routerConfig: Platform.isMacOS || Platform.isWindows || Platform.isLinux ? desktopRouter : mobileRouter
+    );
   }
 }

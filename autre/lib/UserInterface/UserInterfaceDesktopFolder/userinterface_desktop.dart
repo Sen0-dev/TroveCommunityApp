@@ -1,10 +1,8 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sort_child_properties_last
 
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:autre/UserInterface/bonus_days.dart';
 import 'package:autre/UserInterface/UserInterfaceMobileFolder/pages/trove_network.dart';
 
 
@@ -44,6 +42,7 @@ class _UserInterfaceDesktopState extends State<UserInterfaceDesktop> {
             });
           },
         ),
+        
 
         appBar: AppBar(
           toolbarHeight: 50,
@@ -51,6 +50,8 @@ class _UserInterfaceDesktopState extends State<UserInterfaceDesktop> {
           backgroundColor:Colors.red, // Color.fromARGB(255, 249, 216, 6)
           title: 
           Row(children: [
+            Text("Width:" + MediaQuery.of(context).size.width .toString()),
+            Text("Height:" + MediaQuery.of(context).size.height.toString()),
            
             Icon(Icons.circle, color: Colors.grey, size: 17,),
             Text("Members: 1089", style: GoogleFonts.basic(textStyle: TextStyle(color: Colors.black, fontSize: 15)),),

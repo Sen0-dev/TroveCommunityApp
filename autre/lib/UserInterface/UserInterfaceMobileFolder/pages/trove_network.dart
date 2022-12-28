@@ -15,7 +15,7 @@ class _TroveNetworkState extends State<TroveNetwork> {
   Widget build(BuildContext context) {
 
     return Container(
-          width: 1950,
+          width: 1900,
           //decoration: BoxDecoration(border: Border.all(color: Colors.black)),
           child: 
         Column(
@@ -43,17 +43,17 @@ class _TroveNetworkState extends State<TroveNetwork> {
                       Container(height: 190, width: 190, child: Text("Dongeons"),color: Colors.blueGrey),
                       Container(height: 190, width: 190, child: Text("Delves"),color: Colors.orange),
                       Container(height: 190, width: 190, child: Text("Trade"),color: Colors.brown),
+                      Container(height: 190, width: 190, child: Text("Recruitement Club"),color: Colors.teal
+                      ),
                     ],
                   )
                 ),
             ),
             
 
-            
-
             // Bonus Days
           Container(
-            width: 870,
+            width: 800,
             constraints: BoxConstraints(maxHeight: 150),
             decoration:
             BoxDecoration(

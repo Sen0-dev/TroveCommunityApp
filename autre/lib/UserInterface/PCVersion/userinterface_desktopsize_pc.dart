@@ -1,26 +1,18 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sort_child_properties_last
 
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:autre/UserInterface/bonus_days.dart';
 import 'package:autre/UserInterface/UserInterfaceMobileFolder/pages/trove_network.dart';
 
 
-class UserInterfaceMobile extends StatefulWidget {
+class UserInterfacePC extends StatefulWidget {
 
-  _UserInterfaceMobileState createState() => _UserInterfaceMobileState();
+  _UserInterfacePCState createState() => _UserInterfacePCState();
 }
 
-class _UserInterfaceMobileState extends State<UserInterfaceMobile> {
-  final itemsBar = const [
-    Icon(Icons.message_outlined, size: 30),
-    Icon(Icons.square_outlined, size: 30),
-    Icon(Icons.person_outline, size: 30),
-    Icon(Icons.live_tv_outlined, size: 30),
-  ];
-  int indexBar = 1;
+class _UserInterfacePCState extends State<UserInterfacePC> {
+  
 
   @override
   Widget build(BuildContext context) {  
@@ -29,21 +21,7 @@ class _UserInterfaceMobileState extends State<UserInterfaceMobile> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Color.fromARGB(255, 85, 150, 248),
-        bottomNavigationBar: CurvedNavigationBar(
-
-          index: indexBar,
-          color:Color.fromARGB(255, 249, 216, 6), 
-          backgroundColor: Colors.transparent,
-          animationDuration: Duration(milliseconds: 350),
-          height: 60,
-          items: itemsBar,
-          onTap: (selectedIndex) {
-            setState(() {
-              indexBar = selectedIndex;
-              itemsBar[indexBar];
-            });
-          },
-        ),
+        
 
         appBar: AppBar(
           toolbarHeight: 50,
@@ -51,6 +29,9 @@ class _UserInterfaceMobileState extends State<UserInterfaceMobile> {
           backgroundColor:Color.fromARGB(255, 249, 216, 6),
           title: 
           Row(children: [
+
+            Text("Width:" + MediaQuery.of(context).size.width .toString()),
+            Text("Height:" + MediaQuery.of(context).size.height.toString()),
            
             Icon(Icons.circle, color: Colors.grey, size: 17,),
             Text("Members: 1089", style: GoogleFonts.basic(textStyle: TextStyle(color: Colors.black, fontSize: 15)),),
@@ -64,10 +45,48 @@ class _UserInterfaceMobileState extends State<UserInterfaceMobile> {
             Row(mainAxisAlignment: MainAxisAlignment.end, children: [Icon(Icons.settings_outlined, color: Colors.black, size: 25,),],)
             )
           ]),
-        ),
-        
+        ),       
         body:
-        getSelectedWidget(index: indexBar)
+
+        Row(children: [
+        Column(children: [
+          Expanded(child: Container(
+            width: 250,
+            // height: 400,
+            decoration: BoxDecoration(
+              image: DecorationImage(image: AssetImage('assets/images/fanArts/boneQueen.jpg'),
+              fit: BoxFit.cover
+              )
+            ),
+          ),),
+          Expanded(child: Container(
+            width: 250,
+            // height: 400,
+            decoration: BoxDecoration(
+              image: DecorationImage(image: AssetImage('assets/images/fanArts/chocolateDragon.jpg'),
+              fit: BoxFit.cover
+              )
+            ),
+          )),
+        ],), 
+
+        Flexible(child: 
+        TroveNetwork(),
+        ),
+
+        Column(children: [
+          Expanded(child: Container(
+            width: 250,
+            // height: 400,
+            decoration: BoxDecoration(
+              image: DecorationImage(image: AssetImage('assets/images/fanArts/SirupParadise.jpg'),
+              fit: BoxFit.cover
+              )
+            ),
+          )),
+        ],),
+        ],)
+
       ),
     );
   }
