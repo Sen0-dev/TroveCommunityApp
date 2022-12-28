@@ -48,10 +48,14 @@ class _UserInterfacePCState extends State<UserInterfacePC> {
         ),       
         body:
 
-        Row(children: [
+        Row(
+        children: [
        
-        Column(children: [
-          Expanded(child: Container(
+        Column(
+          children: [
+          Expanded(
+            flex: 1,
+            child: Container(
             width: 200,     
             decoration: BoxDecoration(
               image: DecorationImage(image: AssetImage('assets/images/fanArts/boneQueen.jpg'),
@@ -69,9 +73,9 @@ class _UserInterfacePCState extends State<UserInterfacePC> {
           )),
         ],),
 
-        Flexible(child: 
+       Flexible(child:
         TroveNetwork(),
-        ),
+       ),
                 
         Column(children: [
           Expanded(child: Container(
