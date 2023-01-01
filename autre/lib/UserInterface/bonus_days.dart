@@ -7,9 +7,9 @@ import 'package:google_fonts/google_fonts.dart';
 class BonusDays extends StatelessWidget {
 
   String bonus;
-  bool today;
+  bool displayTime;
 
-  BonusDays({required this.bonus,  required this.today});
+  BonusDays({required this.bonus,  required this.displayTime});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class BonusDays extends StatelessWidget {
                           fit: BoxFit.cover
                         )
                       ),
-                      child:  today?
+                      child:  displayTime?
                       Row(                
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.end,
@@ -38,7 +38,7 @@ class BonusDays extends StatelessWidget {
                           )
                         ]
                       ): 
-                      Text("")
+                      null
     );
                     
   }

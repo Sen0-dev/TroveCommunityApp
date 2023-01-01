@@ -1,14 +1,13 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sort_child_properties_last
 
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:autre/UserInterface/bonus_days.dart';
 import 'package:autre/UserInterface/UserInterfaceMobileFolder/pages/trove_network.dart';
 
-
 class UserInterfaceMobile extends StatefulWidget {
+
+  UserInterfaceMobile();
 
   _UserInterfaceMobileState createState() => _UserInterfaceMobileState();
 }
@@ -19,6 +18,7 @@ class _UserInterfaceMobileState extends State<UserInterfaceMobile> {
     Icon(Icons.square_outlined, size: 30),
     Icon(Icons.person_outline, size: 30),
   ];
+  
   int indexBar = 1;
 
   @override
@@ -39,6 +39,7 @@ class _UserInterfaceMobileState extends State<UserInterfaceMobile> {
           onTap: (selectedIndex) {
             setState(() {
               indexBar = selectedIndex;
+
               itemsBar[indexBar];
             });
           },
@@ -49,19 +50,21 @@ class _UserInterfaceMobileState extends State<UserInterfaceMobile> {
           elevation: 1,
           backgroundColor:Color.fromARGB(255, 249, 216, 6),
           title: 
-          Row(children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
            
-            Icon(Icons.circle, color: Colors.grey, size: 17,),
-            Text("Members: 1089", style: GoogleFonts.basic(textStyle: TextStyle(color: Colors.black, fontSize: 15)),),
+            Row(children: [
+              Icon(Icons.circle, color: Colors.grey, size: 17,),
+              Text("Members: 1089", style: GoogleFonts.basic(textStyle: TextStyle(color: Colors.black, fontSize: 15)),),
 
-            SizedBox(width: 20,),
+              SizedBox(width: 20,),
+                
+              Icon(Icons.circle, color: Colors.green, size: 17,),
+              Text("Online: 125", style: GoogleFonts.basic(textStyle: TextStyle(color: Colors.black, fontSize: 15)),),
+            ]),
             
-            Icon(Icons.circle, color: Colors.green, size: 17,),
-            Text("Online: 125", style: GoogleFonts.basic(textStyle: TextStyle(color: Colors.black, fontSize: 15)),),
-            
-            Expanded(child:
-            Row(mainAxisAlignment: MainAxisAlignment.end, children: [Icon(Icons.settings_outlined, color: Colors.black, size: 25,),],)
-            )
+              Icon(Icons.settings_outlined, color: Colors.black, size: 25,),      
           ]),
         ),
         
