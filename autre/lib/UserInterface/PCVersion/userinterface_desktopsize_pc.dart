@@ -19,6 +19,8 @@ class _UserInterfacePCState extends State<UserInterfacePC> {
     Icon(Icons.message_outlined, size: 30),
     Icon(Icons.square_outlined, size: 30),
     Icon(Icons.person_outline, size: 30),
+    Icon(Icons.live_tv, size: 30),
+
   ];
   int indexBar = 1;
   
@@ -32,7 +34,7 @@ class _UserInterfacePCState extends State<UserInterfacePC> {
         backgroundColor: Color.fromARGB(255, 85, 150, 248),
         appBar: AppBar(
           toolbarHeight: 50,
-          elevation: 1,
+          elevation: 7,
           backgroundColor:Color.fromARGB(255, 249, 216, 6),
           title: 
           Row(

@@ -49,6 +49,7 @@ class _RightFanArtState extends State<RightFanArt> {
   Widget build(BuildContext context) {
 
     return Row(children: [
+      SizedBox(width: 20,),
       Column(children: [
               Expanded(child: Container(
                 width: 200,
@@ -59,6 +60,6 @@ class _RightFanArtState extends State<RightFanArt> {
                 ),
               )),
             ],),
-      SizedBox(width: 20,)]);
+      ]);
   }
 }
