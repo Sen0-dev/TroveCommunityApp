@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, prefer_interpolation_to_compose_strings, prefer_typing_uninitialized_variables
 
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'signup_mobile.dart';
 import 'signin_mobile.dart';
@@ -53,9 +52,10 @@ class _MainPageMobileState extends State<MainPageMobile> {
             // Text("Width:" + MediaQuery.of(context).size.width .toString()),
             // Text("Height:" + MediaQuery.of(context).size.height.toString()),
             
-            Container(
+            //Container(
               //decoration: BoxDecoration(color: Colors.pink),
-              child: Column(              
+              //child: 
+              Column(              
               children: [
       
               //TextField(controller: login),
@@ -97,7 +97,8 @@ class _MainPageMobileState extends State<MainPageMobile> {
                   ),
                 )),
               )
-          ])),
+          ]),
+          //),
 
           // Space between title Container and Input Container
            SizedBox(height: 50,),
@@ -165,10 +166,8 @@ class _MainPageMobileState extends State<MainPageMobile> {
             
                 const SizedBox(height: 40,),
 
-                // Login/Signup Interface
-
-                displayInterface      
                 // interface
+                displayInterface      
 
               ],)
               )

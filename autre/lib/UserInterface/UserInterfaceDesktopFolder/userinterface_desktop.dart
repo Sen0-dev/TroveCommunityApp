@@ -50,8 +50,8 @@ class _UserInterfaceDesktopState extends State<UserInterfaceDesktop> {
           backgroundColor:Colors.red, // Color.fromARGB(255, 249, 216, 6)
           title: 
           Row(children: [
-            Text("Width:" + MediaQuery.of(context).size.width .toString()),
-            Text("Height:" + MediaQuery.of(context).size.height.toString()),
+            //Text("Width:" + MediaQuery.of(context).size.width .toString()),
+            //Text("Height:" + MediaQuery.of(context).size.height.toString()),
            
             Icon(Icons.circle, color: Colors.grey, size: 17,),
             Text("Members: 1089", style: GoogleFonts.basic(textStyle: TextStyle(color: Colors.black, fontSize: 15)),),

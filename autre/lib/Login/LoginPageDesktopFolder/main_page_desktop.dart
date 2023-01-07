@@ -69,9 +69,11 @@ Widget displayInterface = SigninDesktop();
             //Text("Height:" + MediaQuery.of(context).size.height.toString()),
             
             Container(  
+              
           //decoration: 
           //BoxDecoration(color: Colors.pink),
             child: Column(
+
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 
@@ -123,6 +125,7 @@ Widget displayInterface = SigninDesktop();
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
         Center(child: 
+        
           Container(
           height: 390,
           width: 500,

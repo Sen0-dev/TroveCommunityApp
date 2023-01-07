@@ -45,6 +45,7 @@ class _UserInterfacePCState extends State<UserInterfacePC> {
             // Text("Width:" + MediaQuery.of(context).size.width .toString()),
             // Text("Height:" + MediaQuery.of(context).size.height.toString()),
               Row(children: [
+
                 Icon(Icons.circle, color: Colors.grey, size: 17,),
                 Text("Members: 1089", style: GoogleFonts.basic(textStyle: TextStyle(color: Colors.black, fontSize: 15)),),
 

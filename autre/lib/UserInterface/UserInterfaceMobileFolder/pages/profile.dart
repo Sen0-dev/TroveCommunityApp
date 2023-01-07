@@ -1,7 +1,5 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -26,7 +24,7 @@ class _ProfileState extends State<Profile> {
                 height: 350,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(10)),
-                  border: Border.all(color: Colors.white, width: 2, ),
+                  border: Border.all(color: Color.fromARGB(142, 0, 0, 0), width: 2, ),
                 ),
                 child: Column(
                 children: [
@@ -37,7 +35,7 @@ class _ProfileState extends State<Profile> {
                       width: 65,
                       height: 65,
                       decoration: BoxDecoration(
-                        border: Border.all(color: Colors.white, width: 1),
+                        border: Border.all(color: Color.fromARGB(142, 0, 0, 0), width: 1),
                         borderRadius: BorderRadius.all(Radius.circular(30)),
                         image: DecorationImage(
                           image: AssetImage('assets/images/Vanguardian_Class.webp'),
@@ -54,7 +52,7 @@ class _ProfileState extends State<Profile> {
                       decoration: InputDecoration(
                         contentPadding: EdgeInsets.symmetric(horizontal: 5),
                         focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white, width: 2)),
+                          borderSide: BorderSide(color: Color.fromARGB(142, 0, 0, 0), width: 2)),
                           enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(color: Color.fromARGB(142, 0, 0, 0), width: 2),
                         ),
@@ -62,7 +60,7 @@ class _ProfileState extends State<Profile> {
                         filled: true,
                         
                         labelText: 'Username',
-                        floatingLabelStyle: TextStyle(color: Colors.white),
+                        floatingLabelStyle: TextStyle(color: Color.fromARGB(142, 0, 0, 0)),
                       ),
                     )),
 
@@ -111,12 +109,12 @@ class _ProfileState extends State<Profile> {
 
                   SizedBox(height: 35),
 
+                  // ----- Platfrom -----
                   Row(children: [
 
                     Expanded(child:
                       Divider(color: Colors.black,)
                     ),
-
                     Padding(
                       padding: EdgeInsets.symmetric(horizontal: 5),
                       child: Text("Platform", textAlign: TextAlign.start,style: GoogleFonts.basic(
@@ -124,7 +122,6 @@ class _ProfileState extends State<Profile> {
                         fontSize: 18,
                       ))),
                     ),
-
                     Expanded(child:
                       Divider(color: Colors.black,)
                     ),
@@ -132,15 +129,15 @@ class _ProfileState extends State<Profile> {
 
                   SizedBox(height: 25,),
 
+                  // Platform buttons
                   Wrap(
                     spacing: 10,
                     runSpacing: 8,
-                    children: [
-                      ElevatedButton(onPressed: null, child: Text("PC"), style: ElevatedButton.styleFrom(fixedSize: Size(75, 35)),),
+                    children: [                     
+                      ElevatedButton(onPressed: null, child: Text("PC"), style: ElevatedButton.styleFrom(fixedSize: Size(77, 35), backgroundColor: Colors.red),),
                       ElevatedButton(onPressed: null, child: Text("Switch"), style: ElevatedButton.styleFrom(fixedSize: Size(85, 35)),),
-                      ElevatedButton(onPressed: null, child: Text("PS4"), style: ElevatedButton.styleFrom(fixedSize: Size(80, 35)),),
+                      ElevatedButton(onPressed: null, child: Text("PS4"), style: ElevatedButton.styleFrom(fixedSize: Size(80, 35),  backgroundColor: Colors.red),),
                       ElevatedButton(onPressed: null, child: Text("Xbox"), style: ElevatedButton.styleFrom(fixedSize: Size(85, 35)),),
-
                     ]
                   ),
 
