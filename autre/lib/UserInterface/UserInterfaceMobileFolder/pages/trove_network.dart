@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:autre/UserInterface/bonus_days.dart';
 
@@ -83,7 +82,7 @@ class _TroveNetworkState extends State<TroveNetwork> {
                     SizedBox(width: 2),
                     BonusDays(bonus: 'assets/images/bonusDays/xp.png', displayTime: false),
                     SizedBox(width: 2,),
-                    BonusDays(bonus: 'assets/images/bonusDays/booty.png', displayTime: false),
+                    BonusDays(bonus: 'assets/images/bonusDays/delves.png', displayTime: false),
                   ],
                 ),
               )           

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:autre/UserInterface/PCVersion/pages/trove_network_pc.dart';
+import 'package:autre/UserInterface/UserInterfaceMobileFolder/pages/profile.dart';
 
 
 class UserInterfacePC extends StatefulWidget {
@@ -31,7 +32,7 @@ class _UserInterfacePCState extends State<UserInterfacePC> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Color.fromARGB(255, 85, 150, 248),
+        backgroundColor: indexBar == 2 ? Color.fromARGB(224, 31, 74, 205) : Color.fromARGB(255, 85, 150, 248), // left: Color.fromARGB(255, 16, 50, 144)
         appBar: AppBar(
           toolbarHeight: 50,
           elevation: 7,
@@ -90,10 +91,10 @@ Widget getSelectedWidget({required int index}) {
       page = TroveNetworkPC() ;
       break;
     case 2:
-      page = Text("profile");
+      page = Profile();
       break;
     default:
-      page = Text("TV");
+      page = Text("Soon");
       break;
   }
   return page;

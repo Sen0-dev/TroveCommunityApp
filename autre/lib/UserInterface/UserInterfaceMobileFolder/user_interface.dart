@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:autre/UserInterface/UserInterfaceMobileFolder/pages/trove_network.dart';
+import 'package:autre/UserInterface/UserInterfaceMobileFolder/pages/profile.dart';
+
 
 class UserInterfaceMobile extends StatefulWidget {
 
@@ -27,7 +29,7 @@ class _UserInterfaceMobileState extends State<UserInterfaceMobile> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Color.fromARGB(255, 85, 150, 248),
+        backgroundColor: indexBar == 2 ?  Color.fromARGB(191, 32, 108, 221) : Color.fromARGB(255, 85, 150, 248), 
         bottomNavigationBar: CurvedNavigationBar(
 
           index: indexBar,
@@ -86,7 +88,7 @@ Widget getSelectedWidget({required int index}) {
       page = TroveNetwork();
       break;
     case 2:
-      page = Text("profile");
+      page = Profile();
       break;
     default:
       page = Text("TV");
