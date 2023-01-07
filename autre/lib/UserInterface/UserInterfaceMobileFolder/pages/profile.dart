@@ -21,11 +21,12 @@ class _ProfileState extends State<Profile> {
               
               // Photo, username, the one in game
               Container(
-                padding: EdgeInsets.all(7),
-                width: 310,
+                padding: EdgeInsets.all(15),
+                width: 340,
                 height: 350,
                 decoration: BoxDecoration(
-                  border: Border.all(color: Colors.white, width: 2),
+                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                  border: Border.all(color: Colors.white, width: 2, ),
                 ),
                 child: Column(
                 children: [
@@ -37,6 +38,7 @@ class _ProfileState extends State<Profile> {
                       height: 65,
                       decoration: BoxDecoration(
                         border: Border.all(color: Colors.white, width: 1),
+                        borderRadius: BorderRadius.all(Radius.circular(30)),
                         image: DecorationImage(
                           image: AssetImage('assets/images/Vanguardian_Class.webp'),
                           fit: BoxFit.cover
@@ -44,7 +46,7 @@ class _ProfileState extends State<Profile> {
                       ),
                     ),
 
-                    SizedBox(width: 40),
+                    SizedBox(width: 45),
 
                     // Username
                     Expanded(child:
@@ -74,40 +76,40 @@ class _ProfileState extends State<Profile> {
                     ),
                   ]),
 
-                  SizedBox(height: 8),
+                  SizedBox(height: 11),
 
+                  // Row game username
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [ 
-                    
-                      Container(
-                        height: 50,
-                        width: 142,
-                        child:
-                          Expanded(child:
-                              TextFormField(
-                                initialValue: "Xx_Killer_xX",
-                                decoration: InputDecoration(                      
-                                  focusedBorder: OutlineInputBorder(
-                                    borderSide: BorderSide.none),                               
-                                  enabledBorder: InputBorder.none ,
-                                  suffixIcon: Icon(Icons.create, size: 16,),
-                                ),
-                                style: TextStyle(fontSize: 13.5,),
-                              )
-                          ),),
+                    children: [                     
+                      Expanded(child: 
+                        TextFormField(
+                          initialValue: "Xx_Killer_xX",
+                          textDirection: TextDirection.rtl,
+                          decoration: InputDecoration(
+                            contentPadding: EdgeInsets.symmetric(horizontal: 5),
+                            focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide.none),
+                              enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide.none,
+                            ),
+                            suffixIcon: Icon(Icons.create, size: 17,),
+                            floatingLabelStyle: TextStyle(color: Colors.white),
+                          ),
+                      ),
+                    ),                      
 
-                          SizedBox(width: 20 ),
+                    SizedBox(width: 15,),
 
-                          InkWell(
-                                onTap: () {
-                                  // Do something when the button is tapped
-                                },
-                                child: Icon(Icons.help_outline, color: Color.fromARGB(142, 0, 0, 0),),
-                          )
+                    InkWell(
+                      onTap: () {
+                        // Do something when the button is tapped
+                      },
+                      child: Icon(Icons.help_outline, color: Color.fromARGB(142, 0, 0, 0)),
+                    ),
+                          
                   ]),
 
-                  SizedBox(height: 20),
+                  SizedBox(height: 35),
 
                   Row(children: [
 
@@ -131,25 +133,18 @@ class _ProfileState extends State<Profile> {
                   SizedBox(height: 25,),
 
                   Wrap(
-                    runAlignment: WrapAlignment.center,
                     spacing: 10,
-                    runSpacing: 5,
+                    runSpacing: 8,
                     children: [
-                      
-                      ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Color.fromARGB(255, 226, 201, 12),
-                          elevation: 0,
-                        ),
-                        onPressed: null,
-                        child: Text("PCC", style: GoogleFonts.basic())
-                      ),
-                      ElevatedButton(onPressed: null, child: Text("Switch")),
-                      ElevatedButton(onPressed: null, child: Text("PS4")),
-                      ElevatedButton(onPressed: null, child: Text("Xbox")),
+                      ElevatedButton(onPressed: null, child: Text("PC"), style: ElevatedButton.styleFrom(fixedSize: Size(75, 35)),),
+                      ElevatedButton(onPressed: null, child: Text("Switch"), style: ElevatedButton.styleFrom(fixedSize: Size(85, 35)),),
+                      ElevatedButton(onPressed: null, child: Text("PS4"), style: ElevatedButton.styleFrom(fixedSize: Size(80, 35)),),
+                      ElevatedButton(onPressed: null, child: Text("Xbox"), style: ElevatedButton.styleFrom(fixedSize: Size(85, 35)),),
+
                     ]
                   ),
-                  
+
+
 
 
                 ])
